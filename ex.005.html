@@ -16,51 +16,41 @@
             margin-top: 20px;
             font: normal 14pt black ;
             background-color: antiquewhite;
-            
         }
-        
     </style>
 </head>
 <body>  
     <h1> Bem vindo </h1>
     <p> Acesse ao DETRAN!</p>
-     <strong>Login</strong> <input type="email" name="login" id="login"input>
-    <strong>Senha:</strong> <input type="password" name="senha" id="senha"input>
+    <strong>Login</strong> <input type="email" name="login" id="login">
+    <strong>Senha:</strong> <input type="password" name="senha" id="senha">
     <input type= "button" value= "limpar" onclick="reset()">
     <input type="button" value="verificar" onclick="verificar()">
     <div id="res"> <strong>Resultado!</strong> </div>
     
-    
-<script>
-function verificar(){
-    var login = document.getElementById('britocaique2016@gmail.com')
-    var senha = document.getElementById('22011998')
-    var res  = document.getElementById('res')
-    res.innerHTML = (`Seja bem vindo ${nome}`)
-if (login = 'login' && login == 'britocaique2016@gmail.com'){
-        res.style.color = 'green'
-        res.innerHTML += `<p> <strong> SEU ACESSO ESTÁ LIBERADO! </strong>`
-} else { 
-    console.log(  )
-        res.style.color = 'red'
-        res.innerHTML= `<p> <strong> SEU ACESSO FOI NEGADO</strong> <p>`
-    }
-}
-function reset(){
-        var reset1 = document.getElementById('login')
-        var reset2 = document.getElementById('senha')
-        var reset3 = document.getElementById('res')
-        reset1.value = '';
-        reset2.value ='';
-        reset3.value ='';
-        reset3.innerHTML= 'Resultado';
-}
-    
-        
-      
+    <script>
+        function verificar(){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+            var res  = document.getElementById('res');
+            res.innerHTML = `Seja bem vindo ${login}`;
+            if (login === 'britocaique2016@gmail.com' && senha === '22011998'){
+                res.style.color = 'green';
+                res.innerHTML += `<p> <strong> SEU ACESSO ESTÁ LIBERADO! </strong>`;
+            } else { 
+                res.style.color = 'red';
+                res.innerHTML = `<p> <strong> SEU ACESSO FOI NEGADO</strong> <p>`;
+            }
+        }
 
+        function reset(){
+            var reset1 = document.getElementById('login');
+            var reset2 = document.getElementById('senha');
+            var reset3 = document.getElementById('res');
+            reset1.value = '';
+            reset2.value ='';
+            reset3.innerHTML = 'Resultado';
+        }
     </script>
-
-    
 </body>
 </html>
