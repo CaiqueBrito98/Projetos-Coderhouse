@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            background-color: rgb(192, 102, 102);
+            text-align: center;
+            font: normal 20pt arial;
+            color: rgb(0, 0, 0);
+        }
+        div#res { 
+            margin-top: 20px;
+            font: normal 14pt black ;
+            background-color: antiquewhite;
+            
+        }
+        
+    </style>
+</head>
+<body>  
+    <h1> Bem vindo </h1>
+    <p> Acesse ao DETRAN!</p>
+     <strong>Login</strong> <input type="email" name="login" id="login"input>
+    <strong>Senha:</strong> <input type="password" name="senha" id="senha"input>
+    <input type= "button" value= "limpar" onclick="reset()">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"> <strong>Resultado!</strong> </div>
+    
+    
+<script>
+function verificar(){
+    var login = document.getElementById('britocaique2016@gmail.com')
+    var senha = document.getElementById('22011998')
+    var res  = document.getElementById('res')
+    res.innerHTML = (`Seja bem vindo ${nome}`)
+if (login = 'login' && login == 'britocaique2016@gmail.com'){
+        res.style.color = 'green'
+        res.innerHTML += `<p> <strong> SEU ACESSO ESTÁ LIBERADO! </strong>`
+} else { 
+    console.log(  )
+        res.style.color = 'red'
+        res.innerHTML= `<p> <strong> SEU ACESSO FOI NEGADO</strong> <p>`
+    }
+}
+function reset(){
+        var reset1 = document.getElementById('login')
+        var reset2 = document.getElementById('senha')
+        var reset3 = document.getElementById('res')
+        reset1.value = '';
+        reset2.value ='';
+        reset3.value ='';
+        reset3.innerHTML= 'Resultado';
+}
+    
+        
+      
+
+    </script>
+
+    
+</body>
+</html>
